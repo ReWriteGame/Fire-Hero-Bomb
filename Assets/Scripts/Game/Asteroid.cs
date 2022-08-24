@@ -40,5 +40,12 @@ public class Asteroid : MonoBehaviour
     {
         Destroy(gameObject);
     }
-
+    
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.GetComponent<Destroyer>())
+        {
+            Destroy(gameObject);
+        }
+    }
 }
