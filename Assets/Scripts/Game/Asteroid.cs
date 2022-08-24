@@ -1,18 +1,44 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Asteroid : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Fire fire;
+    [SerializeField] private Vector2Int countBullets;
+
+    public event Action<Asteroid> OnExplosion;
+    
+    private Collider2D collider;
+    private Rigidbody2D rb;
+    
+    private void Awake()
     {
+        collider = GetComponent<Collider2D>();
+        rb = GetComponent<Rigidbody2D>();
+    }
+    
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.GetComponent<Bullet>())
+        {
+            fire.FireShotRandomDirection(Random.Range(countBullets.x, countBullets.y));
+            Explosion();
+        }
         
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Explosion()
     {
-        
+        collider.enabled = false;
+        rb.velocity = Vector3.zero;
+        OnExplosion?.Invoke(this);
+        Destroy();
     }
+    
+    private void Destroy()
+    {
+        Destroy(gameObject);
+    }
+
 }
