@@ -184,7 +184,7 @@ Transform:
   m_GameObject: {fileID: 3726271079162052799}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_Children: []
   m_Father: {fileID: 3726271078043352195}
   m_RootOrder: 0
@@ -229,7 +229,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
+  m_Sprite: {fileID: 1819067072443225282, guid: f374fb3fbedd6eb4a88254e788d13679, type: 3}
   m_Color: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -441,27 +441,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9002155652847389240, guid: 2ba73241dd618b74b9735dc814ba74ec, type: 3}
       propertyPath: m_fontSize
-      value: 0.8
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 9002155652847389240, guid: 2ba73241dd618b74b9735dc814ba74ec, type: 3}
       propertyPath: m_margin.x
-      value: 0.1
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 9002155652847389240, guid: 2ba73241dd618b74b9735dc814ba74ec, type: 3}
       propertyPath: m_margin.z
-      value: 0.1
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 9002155652847389240, guid: 2ba73241dd618b74b9735dc814ba74ec, type: 3}
       propertyPath: m_fontColor.b
-      value: 0.2924528
+      value: 0.9245283
       objectReference: {fileID: 0}
     - target: {fileID: 9002155652847389240, guid: 2ba73241dd618b74b9735dc814ba74ec, type: 3}
       propertyPath: m_fontColor.g
-      value: 0.2924528
+      value: 0.9245283
       objectReference: {fileID: 0}
     - target: {fileID: 9002155652847389240, guid: 2ba73241dd618b74b9735dc814ba74ec, type: 3}
       propertyPath: m_fontColor.r
-      value: 0.2924528
+      value: 0.9245283
       objectReference: {fileID: 0}
     - target: {fileID: 9002155652847389240, guid: 2ba73241dd618b74b9735dc814ba74ec, type: 3}
       propertyPath: m_fontSizeMin
@@ -469,7 +469,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9002155652847389240, guid: 2ba73241dd618b74b9735dc814ba74ec, type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 4283124555
+      value: 4293717228
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ba73241dd618b74b9735dc814ba74ec, type: 3}
