@@ -23,6 +23,7 @@ public class Ship : MonoBehaviour
  private void Awake()
  {
      rb = GetComponent<Rigidbody2D>();
+     StartFire();
  }
 
  public void StartFire()

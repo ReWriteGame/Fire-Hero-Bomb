@@ -29,6 +29,7 @@ namespace GamePlay.Player.Touch
         public UnityEvent<Vector2> OnTouchDrag;
         public UnityEvent<Vector2> OnTouchEndDrag;
         public UnityEvent<Vector2> OnTouchDelta;
+        public UnityEvent<Vector2> OnTouchDeltaInPercent;
         public UnityEvent<Vector2> OnTouchInPercent;// 0:0 left down 
         public UnityEvent<Vector2> OnDirectionTouchMove;
         public UnityEvent<Vector2> OnDirectionTouchMoveInPercent;
@@ -80,6 +81,7 @@ namespace GamePlay.Player.Touch
             OnTouchInPercent?.Invoke(_touchScreenInPercent);
             OnTouchDrag?.Invoke(_touchPositionScreen);
             OnTouchDelta?.Invoke(_deltaTouchScreen);
+            OnTouchDeltaInPercent?.Invoke(_deltaTouchScreen );
         }
         
         public void OnPointerUp(PointerEventData eventData)

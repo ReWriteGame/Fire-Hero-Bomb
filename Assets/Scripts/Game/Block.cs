@@ -1,5 +1,6 @@
 using Game.Logic.Score;
 using UnityEngine;
+using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
 
@@ -8,20 +9,26 @@ public class Block : MonoBehaviour
 {
   [SerializeField] private ScoreCounter health;
   [SerializeField] private Vector2 startHealth;
+  [SerializeField] private SkinView skins;
+
+  public UnityEvent OnHealthIsOver;
+  
+  
   private void Start()
   {
+    skins.SetRandomSkin();
     SetStartHealth(Random.Range(startHealth.x, startHealth.y));
-    health.isMinScoreEvent.AddListener(Destroy);
+    health.isMinScoreEvent.AddListener(HealthIsOver);
   }
 
   private void OnDestroy()
   {
-    health.isMinScoreEvent.RemoveListener(Destroy);
+    health.isMinScoreEvent.RemoveListener(HealthIsOver);
   }
 
-  private void Destroy()
+  private void HealthIsOver()
   {
-    Destroy(gameObject);
+    OnHealthIsOver?.Invoke();
   }
 
   public void SetStartHealth(float value)

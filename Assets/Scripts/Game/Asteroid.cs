@@ -10,12 +10,10 @@ public class Asteroid : MonoBehaviour
     public event Action<Asteroid> OnExplosion;
     
     private Collider2D collider;
-    private Rigidbody2D rb;
     
     private void Awake()
     {
         collider = GetComponent<Collider2D>();
-        rb = GetComponent<Rigidbody2D>();
     }
     
     private void OnTriggerEnter2D(Collider2D col)
@@ -25,13 +23,24 @@ public class Asteroid : MonoBehaviour
             fire.FireShotRandomDirection(Random.Range(countBullets.x, countBullets.y));
             Explosion();
         }
+     
+    }
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.GetComponent<Destroyer>())
+        {
+            Destroy(gameObject);
+        }
         
+        if (col.gameObject.GetComponent<Block>())
+        {
+            Destroy();
+        }
     }
 
     private void Explosion()
     {
         collider.enabled = false;
-        rb.velocity = Vector3.zero;
         OnExplosion?.Invoke(this);
         Destroy();
     }
@@ -39,13 +48,5 @@ public class Asteroid : MonoBehaviour
     private void Destroy()
     {
         Destroy(gameObject);
-    }
-    
-    private void OnCollisionEnter2D(Collision2D col)
-    {
-        if (col.gameObject.GetComponent<Destroyer>())
-        {
-            Destroy(gameObject);
-        }
     }
 }
