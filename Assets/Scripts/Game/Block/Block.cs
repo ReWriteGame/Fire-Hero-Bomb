@@ -17,7 +17,6 @@ public class Block : MonoBehaviour
   private void Start()
   {
     skins.SetRandomSkin();
-    SetStartHealth(Random.Range(startHealth.x, startHealth.y));
     health.isMinScoreEvent.AddListener(HealthIsOver);
   }
 

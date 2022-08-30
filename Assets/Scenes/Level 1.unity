@@ -1458,7 +1458,8 @@ MonoBehaviour:
   playOnAwake: 1
   infinity: 1
   numberOfSpawns: {x: 1, y: 1}
-  "delay\u0412etweenSpawns": {x: 2, y: 4}
+  "startDelay\u0412etwenSpawns": {x: 0, y: 0}
+  "delay\u0412etwenSpawns": {x: 2, y: 4}
   OnStartSpawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -7052,7 +7053,8 @@ MonoBehaviour:
   playOnAwake: 1
   infinity: 1
   numberOfSpawns: {x: 1, y: 1}
-  "delay\u0412etweenSpawns": {x: 4, y: 4}
+  "startDelay\u0412etwenSpawns": {x: 0, y: 0}
+  "delay\u0412etwenSpawns": {x: 3, y: 4}
   OnStartSpawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -8670,7 +8672,8 @@ MonoBehaviour:
   playOnAwake: 1
   infinity: 1
   numberOfSpawns: {x: 1, y: 1}
-  "delay\u0412etweenSpawns": {x: 2, y: 4}
+  "startDelay\u0412etwenSpawns": {x: 0, y: 0}
+  "delay\u0412etwenSpawns": {x: 2, y: 4}
   OnStartSpawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -9326,7 +9329,8 @@ MonoBehaviour:
   playOnAwake: 1
   infinity: 1
   numberOfSpawns: {x: 1, y: 1}
-  "delay\u0412etweenSpawns": {x: 2, y: 4}
+  "startDelay\u0412etwenSpawns": {x: 0, y: 0}
+  "delay\u0412etwenSpawns": {x: 2, y: 4}
   OnStartSpawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -15085,7 +15089,8 @@ MonoBehaviour:
   playOnAwake: 1
   infinity: 1
   numberOfSpawns: {x: 1, y: 1}
-  "delay\u0412etweenSpawns": {x: 2, y: 4}
+  "startDelay\u0412etwenSpawns": {x: 0, y: 0}
+  "delay\u0412etwenSpawns": {x: 2, y: 4}
   OnStartSpawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -15210,7 +15215,8 @@ MonoBehaviour:
   playOnAwake: 1
   infinity: 1
   numberOfSpawns: {x: 1, y: 1}
-  "delay\u0412etweenSpawns": {x: 2, y: 4}
+  "startDelay\u0412etwenSpawns": {x: 0, y: 0}
+  "delay\u0412etwenSpawns": {x: 2, y: 4}
   OnStartSpawnEvent:
     m_PersistentCalls:
       m_Calls: []

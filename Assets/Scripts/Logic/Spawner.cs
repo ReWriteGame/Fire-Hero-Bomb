@@ -14,7 +14,8 @@ public class Spawner : MonoBehaviour
     [SerializeField] private bool playOnAwake = true;
     [SerializeField] private bool infinity = true;
     [SerializeField] Vector2Int numberOfSpawns = Vector2Int.one;
-    [SerializeField] Vector2 delayВetweenSpawns = Vector2.one;
+    [SerializeField] Vector2 startDelayВetwenSpawns = Vector2.zero;
+    [SerializeField] Vector2 delayВetwenSpawns = Vector2.one;
 
     public UnityEvent OnStartSpawnEvent;
     public UnityEvent OnStopSpawnEvent;
@@ -29,16 +30,18 @@ public class Spawner : MonoBehaviour
 
     private IEnumerator StartSpawnRoutine()
     {
+        yield return new WaitForSeconds(Random.Range(startDelayВetwenSpawns.x, startDelayВetwenSpawns.y));
+
         while (infinity)
         {
-            yield return new WaitForSeconds(Random.Range(delayВetweenSpawns.x, delayВetweenSpawns.y));
             SpawnRandomPrefab();
+            yield return new WaitForSeconds(Random.Range(delayВetwenSpawns.x, delayВetwenSpawns.y));
         }
 
         for (int i = 0; i < Random.Range(numberOfSpawns.x, numberOfSpawns.y); i++)
         {
-            yield return new WaitForSeconds(Random.Range(delayВetweenSpawns.x, delayВetweenSpawns.y));
             SpawnRandomPrefab();
+            yield return new WaitForSeconds(Random.Range(delayВetwenSpawns.x, delayВetwenSpawns.y));
         }
 
         OnStopSpawnEvent?.Invoke();

@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
@@ -15,6 +14,7 @@ public class Ship : MonoBehaviour
  private Rigidbody2D rb;
  
  public UnityEvent OnDeath;
+ public UnityEvent OnFire;
  
  
  public Rigidbody2D Rb => rb;
@@ -66,6 +66,7 @@ public class Ship : MonoBehaviour
      while (true)
      {
          fire.FireShotForward(countBullets);
+         OnFire?.Invoke();
          yield return delay;
      }
  }

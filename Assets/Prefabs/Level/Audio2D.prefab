@@ -614,7 +614,7 @@ GameObject:
   - component: {fileID: 6047421350633787429}
   - component: {fileID: 6281056274664685317}
   m_Layer: 0
-  m_Name: DeathEnemy
+  m_Name: DestroyBlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -645,7 +645,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 8911742078530553623, guid: 548a7f001ca6d3d4cb67c8edf84f62a3, type: 2}
-  m_audioClip: {fileID: 8300000, guid: cb353df6ffad59e4cb025981da3a96e1, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 286297bfa3f81a045b0ae9d4532a194c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
