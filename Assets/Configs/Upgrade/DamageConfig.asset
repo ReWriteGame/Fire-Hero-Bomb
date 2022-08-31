@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de74c246c936d154586535486d937ae9, type: 3}
+  m_Name: DamageConfig
+  m_EditorClassIdentifier: 
+  currentLevel: 0
+  levels:
+  - value: 1
+    price: 0
+  - value: 2
+    price: 10
+  - value: 3
+    price: 20
+  - value: 4
+    price: 30
+  - value: 5
+    price: 40
+  - value: 6
+    price: 50
+  - value: 7
+    price: 60
+  - value: 8
+    price: 70
+  - value: 9
+    price: 80
+  - value: 10
+    price: 90

@@ -6,6 +6,7 @@ public class Asteroid : MonoBehaviour
 {
     [SerializeField] private Fire fire;
     [SerializeField] private Vector2Int countBullets;
+    [SerializeField] private LevelCounter bullets;
 
     public event Action<Asteroid> OnExplosion;
     
@@ -20,7 +21,7 @@ public class Asteroid : MonoBehaviour
     {
         if (col.gameObject.GetComponent<Bullet>())
         {
-            fire.FireShotRandomDirection(Random.Range(countBullets.x, countBullets.y));
+            fire.FireShotRandomDirection(Random.Range((int)bullets.GetCurrentValue() - 1, (int)bullets.GetCurrentValue() + 1));
             Explosion();
         }
      

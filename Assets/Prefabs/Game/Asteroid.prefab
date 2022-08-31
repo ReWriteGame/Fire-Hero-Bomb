@@ -87,6 +87,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fire: {fileID: 3695865131676430293}
   countBullets: {x: 5, y: 7}
+  bullets: {fileID: 11400000, guid: a184d35f665a0e449a64c973a7bb1503, type: 2}
 --- !u!114 &3695865131676430293
 MonoBehaviour:
   m_ObjectHideFlags: 0
