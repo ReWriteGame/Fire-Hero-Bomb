@@ -28,6 +28,11 @@ public class Asteroid : MonoBehaviour
             Explosion();
         }
      
+        if (col.gameObject.GetComponent<BlockCollector>())
+        {
+            fire.FireShotRandomDirection(Random.Range((int)bullets.GetCurrentValue() - 1, (int)bullets.GetCurrentValue() + 1));
+            Explosion();
+        }
     }
     private void OnCollisionEnter2D(Collision2D col)
     {

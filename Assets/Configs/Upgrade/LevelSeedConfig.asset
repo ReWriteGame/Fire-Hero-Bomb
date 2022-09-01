@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de74c246c936d154586535486d937ae9, type: 3}
   m_Name: LevelSeedConfig
   m_EditorClassIdentifier: 
-  currentLevel: 0
+  currentLevel: 2
   levels:
   - value: 5115454
     price: 0

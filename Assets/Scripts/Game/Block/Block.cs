@@ -41,14 +41,19 @@ public class Block : MonoBehaviour
         {
             health.TakeAway(col.gameObject.GetComponent<Bullet>().Damage);
         }
+        
+        if (col.gameObject.GetComponent<BlockCollector>())
+        {
+            HealthIsOver();
+        }
 
     }
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        //if (col.gameObject.GetComponent<Destroyer>())
-        //{
-        //    Destroy(gameObject);
-        //}
+        if (col.gameObject.GetComponent<Destroyer>())
+        {
+            Destroy(gameObject);
+        }
     }
 }
