@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
@@ -42,9 +43,14 @@ public class Ship : MonoBehaviour
  {
      if (col.gameObject.GetComponent<Asteroid>())
      {
-         Death();
+        // Death();
      }
      
+   
+ }
+
+ private void OnTriggerEnter2D(Collider2D col)
+ {
      if (col.gameObject.GetComponent<Block>())
      {
          Death();

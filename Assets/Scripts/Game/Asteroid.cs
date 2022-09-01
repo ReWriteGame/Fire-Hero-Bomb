@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
 public class Asteroid : MonoBehaviour
@@ -8,13 +9,15 @@ public class Asteroid : MonoBehaviour
     [SerializeField] private Vector2Int countBullets;
     [SerializeField] private LevelCounter bullets;
 
-    public event Action<Asteroid> OnExplosion;
+    public UnityEvent<Asteroid> OnExplosion;
     
     private Collider2D collider;
+    private Rigidbody2D rb;
     
     private void Awake()
     {
         collider = GetComponent<Collider2D>();
+        rb = GetComponent<Rigidbody2D>();
     }
     
     private void OnTriggerEnter2D(Collider2D col)
@@ -35,19 +38,26 @@ public class Asteroid : MonoBehaviour
         
         if (col.gameObject.GetComponent<Block>())
         {
-            Destroy();
+            Destroy(0);
+        }
+        
+        if (col.gameObject.GetComponent<Ship>())
+        {
+            Explosion();
         }
     }
 
     private void Explosion()
     {
+        rb.angularVelocity = 0;
+        rb.isKinematic = true;
         collider.enabled = false;
         OnExplosion?.Invoke(this);
-        Destroy();
+        Destroy(1f);
     }
     
-    private void Destroy()
+    private void Destroy(float time)
     {
-        Destroy(gameObject);
+        Destroy(gameObject, time);
     }
 }

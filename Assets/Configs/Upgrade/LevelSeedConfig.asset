@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de74c246c936d154586535486d937ae9, type: 3}
+  m_Name: LevelSeedConfig
+  m_EditorClassIdentifier: 
+  currentLevel: 0
+  levels:
+  - value: 5115454
+    price: 0
+  - value: 55
+    price: 0
+  - value: 4556555
+    price: 0
+  - value: 81111110
+    price: 0
+  - value: 1
+    price: 0
+  - value: -1.324572e+9
+    price: 0
+  - value: 7744444
+    price: 0
+  - value: 33274148
+    price: 0
+  - value: 66518580
+    price: 0
+  - value: 635418
+    price: 0

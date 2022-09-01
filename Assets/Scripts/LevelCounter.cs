@@ -9,6 +9,8 @@ public class LevelCounter : ScriptableObject
   [SerializeField] [Min(0)] private int currentLevel;
   [SerializeField] private List<Level> levels;
 
+  public int CurrentLevel => currentLevel;
+
   public float GetCurrentValue()
   {
     return levels[currentLevel].value;

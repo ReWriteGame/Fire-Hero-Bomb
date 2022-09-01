@@ -1,13 +1,27 @@
+using System;
 using GamePlay.Player.Touch;
+using TMPro;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class GameController : MonoBehaviour
 {
    [SerializeField]private TouchScreenInfoPanel touch;
    [SerializeField]private Ship shipPlayer;
+   [SerializeField]private LevelCounter levelSeeds;
+   [SerializeField]private TextMeshProUGUI levelLabel;
+
+   private void Awake()
+   {
+      if (!levelSeeds.IsLastLevel())
+      {
+         Random.seed = (int) levelSeeds.GetCurrentValue();
+      }
+   }
 
    private void Start()
    {
+      levelLabel.text = $"{levelSeeds.CurrentLevel + 1}";
       touch.OnTouchInPercent.AddListener(MovePlayer);
    }
 
