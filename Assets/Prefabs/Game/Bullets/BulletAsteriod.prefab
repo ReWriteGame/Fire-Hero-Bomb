@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7858155825613171473}
   - component: {fileID: 4815403213344858090}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3504683491259528311}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 3504683492308963161}
   - component: {fileID: 3504683492308963162}
   - component: {fileID: 3504683492308963164}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: BulletAsteriod
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -200,6 +200,8 @@ MonoBehaviour:
   damageConfig: {fileID: 11400000, guid: 28e6ac9236b31e94a9579c254c51113f, type: 2}
   damage: 1
   speed: 5
+  radius: 0.5
+  numMaskLayer: 0
 --- !u!1 &3504683492437041908
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,7 +213,7 @@ GameObject:
   - component: {fileID: 3504683492437041907}
   - component: {fileID: 3504683492437041905}
   - component: {fileID: 3504683492437041906}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5013,7 +5015,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3409485263598659710}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Skin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
