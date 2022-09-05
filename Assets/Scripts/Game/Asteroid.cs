@@ -33,6 +33,15 @@ public class Asteroid : MonoBehaviour
             fire.FireShotRandomDirection(Random.Range((int)bullets.GetCurrentValue() - 1, (int)bullets.GetCurrentValue() + 1));
             Explosion();
         }
+        
+        if (col.gameObject.GetComponent<Block>())
+        {
+            Destroy(0);
+        }
+        if (col.gameObject.GetComponent<EndPoint>())
+        {
+            Destroy(gameObject);
+        }
     }
     private void OnCollisionEnter2D(Collision2D col)
     {
