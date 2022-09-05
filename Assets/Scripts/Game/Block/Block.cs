@@ -55,5 +55,9 @@ public class Block : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (col.gameObject.GetComponent<EndPoint>())
+        {
+            Destroy(gameObject);
+        }
     }
 }

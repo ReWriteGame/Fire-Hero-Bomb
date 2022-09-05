@@ -50,6 +50,13 @@ public class Asteroid : MonoBehaviour
         {
             Explosion();
         }
+        
+        if (col.gameObject.GetComponent<EndPoint>())
+        {
+            Destroy(0);
+        }
+        
+        
     }
 
     private void Explosion()

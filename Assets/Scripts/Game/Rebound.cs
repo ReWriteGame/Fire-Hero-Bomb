@@ -7,6 +7,7 @@ using UnityEngine;
 public class Rebound : MonoBehaviour
 {
     public Vector2 result;
+    public float radius;
     public LayerMask layer;// s 4em stalkivaca
     private Rigidbody2D rb;
 
@@ -46,13 +47,18 @@ public class Rebound : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        ReflectProjectile();
+        if (Physics2D.OverlapCircle(transform.position, .5f, layer))
+        {
+            ReflectProjectile();
+        }
     }
 
     private void OnDrawGizmos()
     {
+        Gizmos.color = Color.green;
+        Gizmos.DrawRay(transform.position, result);
         Gizmos.color = Color.red;
-        //Gizmos.DrawRay(target, result);
+        Gizmos.DrawWireSphere(transform.position, radius);
     }
 
 }

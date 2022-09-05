@@ -1070,10 +1070,10 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - serializedVersion: 3
-          time: 0.8303337
+          time: 0.1511271
           value: 1
-          inSlope: -5.893923
-          outSlope: -5.893923
+          inSlope: -1.1780326
+          outSlope: -1.1780326
           tangentMode: 34
           weightedMode: 0
           inWeight: 0
@@ -1081,8 +1081,8 @@ ParticleSystem:
         - serializedVersion: 3
           time: 1
           value: 0
-          inSlope: -5.893923
-          outSlope: -5.893923
+          inSlope: -1.1780326
+          outSlope: -1.1780326
           tangentMode: 34
           weightedMode: 0
           inWeight: 0.33333334
@@ -5024,6 +5024,7 @@ MonoBehaviour:
   damage: 1
   speed: 10
   radius: 2
+  missingTime: 0.5
   OnExplose:
     m_PersistentCalls:
       m_Calls:
@@ -5103,6 +5104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   result: {x: 0, y: 0}
+  radius: 0.1
   layer:
     serializedVersion: 2
     m_Bits: 16

@@ -745,7 +745,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6086534247118497654, guid: 9ed0f7701d1817b4295c6d2b80ce225b, type: 3}
       propertyPath: m_fontSize
-      value: 212.6
+      value: 166.7
       objectReference: {fileID: 0}
     - target: {fileID: 6086534247118497654, guid: 9ed0f7701d1817b4295c6d2b80ce225b, type: 3}
       propertyPath: m_margin.w
@@ -789,7 +789,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6086534247118497654, guid: 9ed0f7701d1817b4295c6d2b80ce225b, type: 3}
       propertyPath: m_enableAutoSizing
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6086534247118497654, guid: 9ed0f7701d1817b4295c6d2b80ce225b, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -6861,7 +6861,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6086534247118497654, guid: 9ed0f7701d1817b4295c6d2b80ce225b, type: 3}
       propertyPath: m_fontSize
-      value: 212.6
+      value: 166.7
       objectReference: {fileID: 0}
     - target: {fileID: 6086534247118497654, guid: 9ed0f7701d1817b4295c6d2b80ce225b, type: 3}
       propertyPath: m_margin.w
@@ -6905,7 +6905,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6086534247118497654, guid: 9ed0f7701d1817b4295c6d2b80ce225b, type: 3}
       propertyPath: m_enableAutoSizing
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6086534247118497654, guid: 9ed0f7701d1817b4295c6d2b80ce225b, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -19204,7 +19204,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6086534247118497654, guid: 9ed0f7701d1817b4295c6d2b80ce225b, type: 3}
       propertyPath: m_fontSize
-      value: 212.6
+      value: 166.7
       objectReference: {fileID: 0}
     - target: {fileID: 6086534247118497654, guid: 9ed0f7701d1817b4295c6d2b80ce225b, type: 3}
       propertyPath: m_margin.w
@@ -19248,7 +19248,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6086534247118497654, guid: 9ed0f7701d1817b4295c6d2b80ce225b, type: 3}
       propertyPath: m_enableAutoSizing
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6086534247118497654, guid: 9ed0f7701d1817b4295c6d2b80ce225b, type: 3}
       propertyPath: m_fontColor32.rgba
