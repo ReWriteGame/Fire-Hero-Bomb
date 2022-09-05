@@ -10,6 +10,7 @@ public class Bullet : MonoBehaviour
     [SerializeField]private float speed;
     [SerializeField]private float radius = 0.5f;
     [SerializeField]private float missingTime = 0.5f;
+    [SerializeField]private SkinView skinView;
 
     public UnityEvent OnExplose;
     public UnityEvent OnMissing;
@@ -23,9 +24,14 @@ public class Bullet : MonoBehaviour
     public float Speed => speed;
     public Rigidbody2D Rb => rb;
 
+    public void SetSkin(int id)
+    {
+        if(skinView != null) skinView.SetSkin(id);
+    }
 
     private void Awake()
     {
+        if(skinView != null)skinView.SetRandomSkin();
         
         if (damageConfig != null)
         {

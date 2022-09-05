@@ -47,6 +47,10 @@ public class Block : MonoBehaviour
             HealthIsOver();
         }
 
+        if (col.gameObject.GetComponent<EndPoint>())
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D col)

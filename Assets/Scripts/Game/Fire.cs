@@ -1,31 +1,42 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.Events;
 
 public class Fire : MonoBehaviour
 {
     [SerializeField][Range(0,1)] private float radius = 1;
     [SerializeField] private List<Bullet> bullets;
 
+    public UnityEvent OnStartSpawn;
+    public UnityEvent OnEndSpawn;
+    
+    
 
+    public List<Bullet> bulletsList;
+    
     public void FireShotRandomDirection(int countBullets)
     {
-        List<Bullet> bulletsList = new List<Bullet>();
+        OnStartSpawn?.Invoke();
+        bulletsList = new List<Bullet>();
 
         for (int i = 0; i < countBullets; i++)
             bulletsList.Add(CreateRandomBullet(null, transform.position));
 
         bulletsList.ForEach(x => ThrowBullet(x.Rb, GetRandomDirection(), x.Speed));
+        OnEndSpawn?.Invoke();
     }
 
     public void FireShotForward(int countBullets)
     {
-        List<Bullet> bulletsList = new List<Bullet>();
+        OnStartSpawn?.Invoke();
+        bulletsList = new List<Bullet>();
 
         for (int i = 0; i < countBullets; i++)
             bulletsList.Add(CreateRandomBullet(null, transform.position));
 
         bulletsList.ForEach(x => ThrowBullet(x.Rb, Vector2.up, x.Speed));
+        OnEndSpawn?.Invoke();
+
     }
 
     private void ThrowBullet(Rigidbody2D rb, Vector3 direction, float speed)

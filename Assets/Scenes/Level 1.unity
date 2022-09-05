@@ -3073,8 +3073,8 @@ MonoBehaviour:
   playOnAwake: 1
   infinity: 1
   numberOfSpawns: {x: 1, y: 1}
-  "startDelay\u0412etwenSpawns": {x: 0, y: 0}
-  "delay\u0412etwenSpawns": {x: 2, y: 4}
+  "startDelay\u0412etwenSpawns": {x: 0, y: 2}
+  "delay\u0412etwenSpawns": {x: 1.5, y: 4}
   OnStartSpawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -12429,8 +12429,8 @@ MonoBehaviour:
   playOnAwake: 1
   infinity: 1
   numberOfSpawns: {x: 1, y: 1}
-  "startDelay\u0412etwenSpawns": {x: 0, y: 0}
-  "delay\u0412etwenSpawns": {x: 2, y: 4}
+  "startDelay\u0412etwenSpawns": {x: 0, y: 2}
+  "delay\u0412etwenSpawns": {x: 1.5, y: 4}
   OnStartSpawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -13626,8 +13626,8 @@ MonoBehaviour:
   playOnAwake: 1
   infinity: 1
   numberOfSpawns: {x: 1, y: 1}
-  "startDelay\u0412etwenSpawns": {x: 0, y: 0}
-  "delay\u0412etwenSpawns": {x: 2, y: 4}
+  "startDelay\u0412etwenSpawns": {x: 0, y: 2}
+  "delay\u0412etwenSpawns": {x: 1.5, y: 4}
   OnStartSpawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -20031,8 +20031,8 @@ MonoBehaviour:
   playOnAwake: 1
   infinity: 1
   numberOfSpawns: {x: 1, y: 1}
-  "startDelay\u0412etwenSpawns": {x: 0, y: 0}
-  "delay\u0412etwenSpawns": {x: 2, y: 4}
+  "startDelay\u0412etwenSpawns": {x: 0, y: 2}
+  "delay\u0412etwenSpawns": {x: 1.5, y: 4}
   OnStartSpawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -20131,8 +20131,8 @@ MonoBehaviour:
   playOnAwake: 1
   infinity: 1
   numberOfSpawns: {x: 1, y: 1}
-  "startDelay\u0412etwenSpawns": {x: 0, y: 0}
-  "delay\u0412etwenSpawns": {x: 2, y: 4}
+  "startDelay\u0412etwenSpawns": {x: 0, y: 2}
+  "delay\u0412etwenSpawns": {x: 1.5, y: 4}
   OnStartSpawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -27050,7 +27050,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.15, y: 0.3}
   m_AnchorMax: {x: 0.85, y: 0.6}
-  m_AnchoredPosition: {x: 0, y: -77.569984}
+  m_AnchoredPosition: {x: 0, y: -77.57001}
   m_SizeDelta: {x: 0, y: -77.569984}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &2072091933
