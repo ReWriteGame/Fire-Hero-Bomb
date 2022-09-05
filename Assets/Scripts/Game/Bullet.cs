@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 [SelectionBase][RequireComponent(typeof(Collider2D))]
 public class Bullet : MonoBehaviour
@@ -8,10 +9,10 @@ public class Bullet : MonoBehaviour
     [SerializeField]private int damage;
     [SerializeField]private float speed;
     [SerializeField]private float radius = 0.5f;
-    //[SerializeField]private ContactFilter2D filter;
-    [SerializeField]private int numMaskLayer;
-    private int layer;
+    [SerializeField]private float missingTime = 0.5f;
 
+    public UnityEvent OnExplose;
+    public UnityEvent OnMissing;
 
     private Collider2D collider;
     private Rigidbody2D rb;
@@ -25,7 +26,6 @@ public class Bullet : MonoBehaviour
 
     private void Awake()
     {
-        layer = 1 << numMaskLayer;
         
         if (damageConfig != null)
         {
@@ -38,91 +38,46 @@ public class Bullet : MonoBehaviour
 
  
 
-    private void CheckCollider()
-    {
-        colliders = Physics2D.OverlapCircleAll(transform.position, radius);
-    }
-
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.GetComponent<Destroyer>())
         {
-            OnDestroy?.Invoke(this);
-            Destroy();
+            Explose();
         }
        
         if (col.gameObject.GetComponent<Block>())
         {
-            OnDestroy?.Invoke(this);
-            Destroy();
+            Explose();
         }
 
-        //Collider2D[] arr = new Collider2D[10];
-        //col.GetContacts(arr);
-        ReflectProjectile();
-    }
-
-    private Collider2D[] colliders;
-    private RaycastHit2D hit2;
-    private Vector2 currentMovementDirection;
-    //private void FixedUpdate()
-    //{
-    //    currentMovementDirection = -rb.velocity;
-    //    //Debug.Log(currentMovementDirection);
-////
-    //    hit2 = Physics2D.Raycast(transform.position, currentMovementDirection, layer);
-    //    ReflectProjectile();
-    //}
-    
-    public void ReflectProjectile()
-    {
-        currentMovementDirection = rb.velocity;
-        hit2 = Physics2D.Raycast(transform.position, currentMovementDirection, layer);
-        if (hit2.collider != null)
+        if (col.gameObject.GetComponent<Asteroid>())
         {
-            rb.velocity = Vector2.Reflect(currentMovementDirection, hit2.normal);
-            //Debug.Log(hit2.normal);
+            Explose();
         }
-//
-        //Collider2D hit3 = Physics2D.OverlapCircle(transform.position, radius);
-//
-        //if (hit3 != null)
-        //{
-        //    rb.velocity = Vector2.Reflect(currentMovementDirection, hit2.normal);
-        //    Debug.Log(hit2.normal);
-        //}
-        
-       //RaycastHit hit;
-       //Ray ray = new Ray(transform.position, currentMovementDirection);
 
-       //if (Physics.Raycast(ray, out hit))
-       //{
-       //    rb.velocity = Vector3.Reflect(currentMovementDirection, hit.normal);
-       //    Debug.Log(3232);
-       //}
+        if (col.gameObject.CompareTag("Wall"))
+        {
+            Invoke(nameof(Missing), missingTime);
+        }
     }
-    private void OnCollisionEnter2D(Collision2D col)
+
+    private void Missing()
     {
-        //col.
+        Explose();
+        OnMissing?.Invoke();
     }
 
-    private void Rebound(Collision2D col, Vector3 velocity)
-    {
-        float speed = velocity.magnitude;
-        Vector3 direction = Vector3.Reflect(velocity.normalized, col.contacts[0].normal);
-        rb.velocity = direction * speed;
-    }
 
-    private void Destroy()
+  
+    private void Explose()
     {
         collider.enabled = false;
-        gameObject.SetActive(false);
-        Destroy(gameObject);
+        //gameObject.SetActive(false);
+        OnExplose?.Invoke();
+        OnDestroy?.Invoke(this);
+
+
     }
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, radius);
-    }
+
 }

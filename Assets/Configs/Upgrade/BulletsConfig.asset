@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentLevel: 0
   levels:
-  - value: 4
+  - value: 3
     price: 0
+  - value: 4
+    price: 10
   - value: 5
     price: 10
   - value: 6

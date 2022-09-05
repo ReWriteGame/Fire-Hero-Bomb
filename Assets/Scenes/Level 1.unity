@@ -1719,7 +1719,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 233684603}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: GameBorders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2302,8 +2302,8 @@ GameObject:
   - component: {fileID: 363434767}
   m_Layer: 4
   m_Name: Left
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_TagString: Wall
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
@@ -8937,10 +8937,10 @@ GameObject:
   - component: {fileID: 678126318}
   - component: {fileID: 678126319}
   - component: {fileID: 678126320}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Right
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_TagString: Wall
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
@@ -10051,15 +10051,15 @@ CompositeCollider2D:
   m_GenerationType: 0
   m_EdgeRadius: 0
   m_ColliderPaths:
-  - m_Collider: {fileID: 1511517034}
+  - m_Collider: {fileID: 2105184783}
     m_ColliderPaths:
-    - - X: 104999707
+    - - X: -95000293
         Y: -102950000
-      - X: 104999707
+      - X: -95000293
         Y: 102950000
-      - X: 95000000
+      - X: -105000000
         Y: 102949707
-      - X: 95000293
+      - X: -104999707
         Y: -102950000
   - m_Collider: {fileID: 1489631444}
     m_ColliderPaths:
@@ -10071,15 +10071,15 @@ CompositeCollider2D:
         Y: 105000016
       - X: -102950016
         Y: 104999707
-  - m_Collider: {fileID: 2105184783}
+  - m_Collider: {fileID: 1511517034}
     m_ColliderPaths:
-    - - X: -95000293
+    - - X: 104999707
         Y: -102950000
-      - X: -95000293
+      - X: 104999707
         Y: 102950000
-      - X: -105000000
+      - X: 95000000
         Y: 102949707
-      - X: -104999707
+      - X: 95000293
         Y: -102950000
   - m_Collider: {fileID: 1882695138}
     m_ColliderPaths:
@@ -26589,7 +26589,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2014733663
 Transform:
   m_ObjectHideFlags: 0
