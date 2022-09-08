@@ -19,7 +19,7 @@ public class Asteroid : MonoBehaviour
     
     private void Awake()
     {
-        skinId = Random.Range(0, 3);
+        skinId = Random.Range(0, 4);
         skinView.SetSkin(skinId);
         
         fire.OnEndSpawn.AddListener(ApplyColor);

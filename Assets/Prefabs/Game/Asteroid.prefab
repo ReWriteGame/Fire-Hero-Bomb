@@ -141,7 +141,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 34d4944dc7737174a8b19d60396a3ff7, type: 2}
+  - {fileID: 2100000, guid: 6ea00ed0c41a693469a1e83142bdeb0e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -222,7 +222,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 67bea714b78e55341abf03d860437817, type: 2}
+  - {fileID: 2100000, guid: 09832a5ebfcecc8419c724869ec8c3e3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -517,7 +517,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4eae49ee19df7db4ca56d5b79155ce93, type: 3}
-  m_Color: {r: 1, g: 0.24011487, b: 0.24011487, a: 1}
+  m_Color: {r: 0.63529414, g: 0.63529414, b: 0.63529414, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -586,7 +586,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4d91f2796c8dd6646b863f9438e9d33a, type: 2}
+  - {fileID: 2100000, guid: b0eb0478ce89cfb43badbfbb996fe6d4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6499,7 +6499,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ffe10fd4b714adf488246b8e11acfc63, type: 2}
+  - {fileID: 2100000, guid: ff19d08bd6436694195e3f22a2f3abbd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6734,7 +6734,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f663134f992cf594498cfbdf1e3141b4, type: 2}
+  - {fileID: 2100000, guid: cce7c67aa62151741838e8937601aba6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6810,6 +6810,10 @@ PrefabInstance:
     - target: {fileID: 3504683492308963165, guid: ec0b38bda7f53074f91115145a10d2ef, type: 3}
       propertyPath: m_Name
       value: BulletAsteriod
+      objectReference: {fileID: 0}
+    - target: {fileID: 3504683492308963165, guid: ec0b38bda7f53074f91115145a10d2ef, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec0b38bda7f53074f91115145a10d2ef, type: 3}
