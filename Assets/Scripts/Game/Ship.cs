@@ -27,6 +27,11 @@ public class Ship : MonoBehaviour
      StartFire();
  }
 
+ private void Update()
+ {
+     //RotationAnimation(transform);
+ }
+
  public void StartFire()
  {
      StopFire();
@@ -75,5 +80,41 @@ public class Ship : MonoBehaviour
          OnFire?.Invoke();
          yield return delay;
      }
+ }
+ 
+ [Space, Header("Rotation Settings")] [SerializeField]
+ private float maxRotationAngle = 45;
+ [SerializeField] private float startRotationAngle = 90;
+ [SerializeField] private float rotationStrengthMultiplier = 1;
+ [SerializeField, Range(0f, 1f)] private float rotationSmoothness = 0.2f;
+
+ private void Start()
+ {
+     StartCoroutine(RotationAnimationRoutine());
+ }
+
+
+ private IEnumerator RotationAnimationRoutine()
+ {
+     var delay = new WaitForFixedUpdate();
+     var transform = this.transform;
+     while (gameObject)
+     {
+         float lastPositionX = transform.position.x;
+         yield return delay;
+         float sizeDelta = transform.position.x - lastPositionX;
+         RotationAnimation(transform, -sizeDelta);
+     }
+ }
+
+ private void RotationAnimation(Transform obj, float sideDelta)
+ {
+     //Rotation Rendering
+     var rotation = obj.eulerAngles;
+     var nextRotation = startRotationAngle + sideDelta * rotationStrengthMultiplier;
+     nextRotation = Mathf.Clamp(nextRotation, startRotationAngle - maxRotationAngle, startRotationAngle + maxRotationAngle);
+     nextRotation = Mathf.Lerp(rotation.y, nextRotation, rotationSmoothness);
+     rotation.y = nextRotation;
+     obj.eulerAngles = rotation;
  }
 }
