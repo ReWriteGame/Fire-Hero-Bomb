@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using Random = UnityEngine.Random;
@@ -10,12 +11,14 @@ public class Asteroid : MonoBehaviour
     [SerializeField] private LevelCounter bullets;
     [SerializeField] private Vector3 size;
     [SerializeField] private SkinView skinView;
+    [SerializeField] private TextMeshProUGUI countBulletsLabel;
 
     public UnityEvent<Asteroid> OnExplosion;
     
     private Collider2D collider;
     private Rigidbody2D rb;
     private int skinId;
+    private int endCountBullets;
     
     private void Awake()
     {
@@ -26,6 +29,8 @@ public class Asteroid : MonoBehaviour
         
         collider = GetComponent<Collider2D>();
         rb = GetComponent<Rigidbody2D>();
+        endCountBullets = Random.Range((int) bullets.GetCurrentValue() - 1, (int) bullets.GetCurrentValue() + 1);
+        countBulletsLabel.text = $"{endCountBullets}";
     }
 
     private void ApplyColor()
@@ -37,13 +42,13 @@ public class Asteroid : MonoBehaviour
     {
         if (col.gameObject.GetComponent<Bullet>())
         {
-            fire.FireShotRandomDirection(Random.Range((int)bullets.GetCurrentValue() - 1, (int)bullets.GetCurrentValue() + 1));
+            fire.FireShotRandomDirection(endCountBullets);
             Explosion();
         }
      
         if (col.gameObject.GetComponent<BlockCollector>())
         {
-            fire.FireShotRandomDirection(Random.Range((int)bullets.GetCurrentValue() - 1, (int)bullets.GetCurrentValue() + 1));
+            fire.FireShotRandomDirection(endCountBullets);
             Explosion();
         }
         
