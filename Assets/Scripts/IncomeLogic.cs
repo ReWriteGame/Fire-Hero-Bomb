@@ -12,7 +12,7 @@ public class IncomeLogic : MonoBehaviour
 
   public void EndGame()
   {
-    int addValue = (int)(score.Score * income.GetCurrentValue());
+    int addValue = (int)(score.Score * income.GetCurrentValue() / 100);
     money.Add(addValue);
     labelIncome.text = $"{addValue}";
     labelIncome2.text = $"{addValue}";
